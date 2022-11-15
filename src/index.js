@@ -26,15 +26,14 @@ class Idezet{
 }
 
 document.addEventListener('DOMContentLoaded', () =>{
-    document.getElementById('osszesIdezetLista').value = "Almafa";
-    console.log("Almafa loaded");
-    async () => {
+    
+    document.getElementById('osszesIdezetGomb').addEventListener('click', ()=>{
         let response = await fetch('/quotes.json'); 
         let eredmeny = await response.json();
 
         console.log(response);
-        
-    }
+    });
+    
 
 
 });
